@@ -19,5 +19,5 @@ log2$V6 <- NULL
 names(log2) <- c("ip", "timestamp", "method", "url", "code", "bytes", "referref", "useragent", "time", "host", "internalip")
 log2$user.action <- NA
 
-#Что будет, если скрестить Appery с рыцарями и эльфами?
-#Думаю тебе понравится: http://bit.ly/14UFGmz
+#Convert time
+log2$time <- as.factor(ifelse(log2$time=="-", "0", as.character(log2$time)))
