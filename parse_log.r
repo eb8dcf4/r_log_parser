@@ -21,3 +21,6 @@ log2$user.action <- NA
 
 #Convert time
 log2$time <- as.factor(ifelse(log2$time=="-", "0", as.character(log2$time)))
+
+log2$is.server.error <- FALSE
+log2[log2$code >= 500, ]$is.server.error <- TRUE
