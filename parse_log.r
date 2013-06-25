@@ -8,3 +8,9 @@ log2$V5 <- NULL
 log2$V6 <- as.character(log2$V6)
 log2[log2$V6=="-", "V6"] <- "- - -" #Must be two spaces in this field
 log2$V6 <- as.factor(log2$V6)
+
+urlParts <- strsplit(as.character(log2$V6), " ")
+urlParts <- matrix(unlist(urlParts), ncol=3, byrow=TRUE)
+log2$V3 <- urlParts[,1]
+log2$V4 <- urlParts[,2]
+log2$V6 <- NULL
