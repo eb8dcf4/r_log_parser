@@ -67,3 +67,5 @@ fill.user.action <- function(logData) {
   
   return(logData)
 }
+
+log2 <- fill.user.action(log2)
