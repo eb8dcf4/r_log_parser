@@ -14,3 +14,7 @@ urlParts <- matrix(unlist(urlParts), ncol=3, byrow=TRUE)
 log2$V3 <- urlParts[,1]
 log2$V4 <- urlParts[,2]
 log2$V6 <- NULL
+
+#Adjust column names
+names(log2) <- c("ip", "timestamp", "method", "url", "code", "bytes", "referref", "useragent", "time", "host", "internalip")
+log2$user.action <- NA
