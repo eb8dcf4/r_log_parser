@@ -18,3 +18,6 @@ log2$V6 <- NULL
 #Adjust column names
 names(log2) <- c("ip", "timestamp", "method", "url", "code", "bytes", "referref", "useragent", "time", "host", "internalip")
 log2$user.action <- NA
+
+#Что будет, если скрестить Appery с рыцарями и эльфами?
+#Думаю тебе понравится: http://bit.ly/14UFGmz
